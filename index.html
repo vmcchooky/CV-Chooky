@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Võ Mạnh Cường - IT Network Engineer</title>
     <style>
+        /* SỬA ĐỔI: Thêm 'display=swap' để tối ưu tải font */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        /* THÊM VÀO: Reset box-sizing để đảm bảo nhất quán trên các trình duyệt */
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+            /* Reset cơ bản để loại bỏ các giá trị mặc định của trình duyệt */
+            margin: 0;
+            padding: 0;
+        }
 
         body {
             font-family: 'Roboto', sans-serif;
@@ -14,8 +26,11 @@
             background-color: #ecf0f1;
             margin: 0;
             padding: 30px;
-            animation: fadeInBody 1s ease-in-out;
             font-size: 16px; /* Set base font size for consistency */
+            
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-animation: fadeInBody 1s ease-in-out;
+            animation: fadeInBody 1s ease-in-out;
         }
 
         @keyframes fadeInBody {
@@ -31,17 +46,32 @@
             background-color: #fff;
             border-radius: 20px;
             overflow: hidden;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            animation: slideInContainer 0.8s ease-out;
             border: 1px solid #ddd; /* Added border for container */
+
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-animation: slideInContainer 0.8s ease-out;
+            animation: slideInContainer 0.8s ease-out;
         }
 
         @keyframes slideInContainer {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from { 
+                -webkit-transform: translateY(50px);
+                transform: translateY(50px); 
+                opacity: 0; 
+            }
+            to { 
+                -webkit-transform: translateY(0);
+                transform: translateY(0); 
+                opacity: 1; 
+            }
         }
 
         .sidebar {
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            background: -webkit-linear-gradient(135deg, #3498db, #8e44ad);
             background: linear-gradient(135deg, #3498db, #8e44ad);
             color: #fff;
             padding: 50px 40px;
@@ -59,12 +89,19 @@
             border: 5px solid rgba(255,255,255,0.3);
             margin-bottom: 20px;
             object-fit: cover;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt (cho cả transform và box-shadow) */
+            -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .avatar:hover {
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-transform: scale(1.05);
             transform: scale(1.05);
+            -webkit-box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
@@ -72,6 +109,8 @@
             font-size: 2.2em;
             margin: 10px 0;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-animation: fadeInText 1.2s ease-in-out;
             animation: fadeInText 1.2s ease-in-out;
             font-weight: 700;
             border-bottom: 1px solid rgba(255,255,255,0.5); /* Underline for name */
@@ -82,13 +121,23 @@
             font-size: 1.1em;
             margin-bottom: 30px;
             opacity: 0.9;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-animation: fadeInText 1.4s ease-in-out;
             animation: fadeInText 1.4s ease-in-out;
             font-weight: 400;
         }
 
         @keyframes fadeInText {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { 
+                opacity: 0; 
+                -webkit-transform: translateY(10px);
+                transform: translateY(10px); 
+            }
+            to { 
+                opacity: 1; 
+                -webkit-transform: translateY(0);
+                transform: translateY(0); 
+            }
         }
 
         .contact-info {
@@ -104,11 +153,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-transition: -webkit-transform 0.3s ease;
             transition: transform 0.3s ease;
             font-weight: 400;
         }
 
         .contact-info div:hover {
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-transform: translateX(5px);
             transform: translateX(5px);
         }
 
@@ -121,6 +174,8 @@
         .contact-info a {
             color: #fff;
             text-decoration: none;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-transition: color 0.3s;
             transition: color 0.3s;
         }
 
@@ -140,6 +195,8 @@
             margin-bottom: 20px;
             border-bottom: 2px solid rgba(255,255,255,0.4);
             padding-bottom: 10px;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-animation: fadeInText 1.6s ease-in-out;
             animation: fadeInText 1.6s ease-in-out;
             font-weight: 700;
         }
@@ -153,9 +210,10 @@
             padding-left: 10px;
         }
 
+        /* THÊM VÀO: Reset padding/margin cho list trong skills */
         .skills ul {
             list-style: none;
-            padding: 0;
+            /* padding: 0; */ /* Đã được reset ở đầu file */
         }
 
         .skills li {
@@ -163,7 +221,10 @@
             padding: 12px;
             margin-bottom: 12px;
             border-radius: 8px;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-transition: -webkit-transform 0.3s ease, background 0.3s ease;
             transition: transform 0.3s ease, background 0.3s ease;
+            -webkit-animation: fadeInList 1.8s ease-in-out;
             animation: fadeInList 1.8s ease-in-out;
             font-size: 1em;
             font-weight: 400;
@@ -171,6 +232,8 @@
         }
 
         .skills li:hover {
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-transform: translateY(-3px);
             transform: translateY(-3px);
             background: rgba(255,255,255,0.35);
         }
@@ -185,15 +248,27 @@
         }
 
         .skill-level {
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            background: -webkit-linear-gradient(to right, #fff, #e0e0e0);
             background: linear-gradient(to right, #fff, #e0e0e0);
             height: 100%;
             border-radius: 25px;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-transition: width 0.5s ease-in-out;
             transition: width 0.5s ease-in-out;
         }
 
         @keyframes fadeInList {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
+            from { 
+                opacity: 0; 
+                -webkit-transform: translateX(-20px);
+                transform: translateX(-20px); 
+            }
+            to { 
+                opacity: 1; 
+                -webkit-transform: translateX(0);
+                transform: translateX(0); 
+            }
         }
 
         .main-content {
@@ -203,6 +278,8 @@
         .section {
             margin-bottom: 50px;
             opacity: 0;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-animation: fadeInSection 1s ease-in-out forwards;
             animation: fadeInSection 1s ease-in-out forwards;
             border-bottom: 1px solid #eee; /* Bottom line for sections */
             padding-bottom: 20px;
@@ -212,16 +289,24 @@
             border-bottom: none; /* No border for last section */
         }
 
-        .section:nth-child(1) { animation-delay: 0.5s; }
-        .section:nth-child(2) { animation-delay: 0.7s; }
-        .section:nth-child(3) { animation-delay: 0.9s; }
-        .section:nth-child(4) { animation-delay: 1.1s; }
-        .section:nth-child(5) { animation-delay: 1.3s; }
-        .section:nth-child(6) { animation-delay: 1.5s; }
+        .section:nth-child(1) { -webkit-animation-delay: 0.5s; animation-delay: 0.5s; }
+        .section:nth-child(2) { -webkit-animation-delay: 0.7s; animation-delay: 0.7s; }
+        .section:nth-child(3) { -webkit-animation-delay: 0.9s; animation-delay: 0.9s; }
+        .section:nth-child(4) { -webkit-animation-delay: 1.1s; animation-delay: 1.1s; }
+        .section:nth-child(5) { -webkit-animation-delay: 1.3s; animation-delay: 1.3s; }
+        .section:nth-child(6) { -webkit-animation-delay: 1.5s; animation-delay: 1.5s; }
 
         @keyframes fadeInSection {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { 
+                opacity: 0; 
+                -webkit-transform: translateY(20px);
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                -webkit-transform: translateY(0);
+                transform: translateY(0); 
+            }
         }
 
         .section h2 {
@@ -240,8 +325,12 @@
             left: 0;
             width: 60px;
             height: 4px;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            background: -webkit-linear-gradient(to right, #3498db, #8e44ad);
             background: linear-gradient(to right, #3498db, #8e44ad);
             border-radius: 2px;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-animation: growLine 1s ease-out;
             animation: growLine 1s ease-out;
         }
 
@@ -255,14 +344,20 @@
             padding: 20px;
             background: #f9f9f9;
             border-radius: 10px;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
             font-size: 1em;
             border: 1px solid #ddd; /* Border for items */
         }
 
         .experience-item:hover, .education-item:hover, .activity-item:hover {
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            -webkit-transform: translateY(-5px);
             transform: translateY(-5px);
         }
 
@@ -275,9 +370,10 @@
             padding-bottom: 5px;
         }
 
+        /* THÊM VÀO: Reset padding cho list */
         .projects ul, .certificates ul {
             list-style: none;
-            padding: 0;
+            /* padding: 0; */ /* Đã reset ở đầu */
         }
 
         .projects li, .certificates li {
@@ -285,14 +381,20 @@
             padding: 15px;
             background: #f9f9f9;
             border-radius: 10px;
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
             font-size: 1em;
             border: 1px dashed #ddd; /* Dashed border for project items */
         }
 
         .projects li:hover, .certificates li:hover {
+            /* SỬA ĐỔI: Thêm tiền tố trình duyệt */
+            -webkit-box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            -webkit-transform: translateY(-5px);
             transform: translateY(-5px);
         }
 
@@ -387,6 +489,7 @@
             top: 0;
         }
 
+        /* Các media query của bạn đã rất tốt, giữ nguyên */
         @media (max-width: 1024px) {
             .container {
                 grid-template-columns: 1fr 1.5fr;
@@ -454,6 +557,7 @@
             }
         }
 
+        /* Các style cho bản in của bạn đã rất chi tiết và tốt. Giữ nguyên. */
         @media print {
             /* ========= CÀI ĐẶT CHUNG KHI IN ========= */
             
@@ -465,7 +569,9 @@
                 text-shadow: inherit !important;
 
                 /* Loại bỏ tất cả hiệu ứng chuyển động */
+                -webkit-animation: none !important;
                 animation: none !important;
+                -webkit-transition: none !important;
                 transition: none !important;
             }
 
@@ -487,6 +593,7 @@
 
             .sidebar {
                 /* Ép hiển thị lại nền gradient */
+                background: -webkit-linear-gradient(135deg, #3498db, #8e44ad) !important;
                 background: linear-gradient(135deg, #3498db, #8e44ad) !important;
                 /* Ép hiển thị lại màu chữ */
                 color: #fff !important;
@@ -526,6 +633,7 @@
             }
 
             .skill-level {
+                background: -webkit-linear-gradient(to right, #fff, #e0e0e0) !important;
                 background: linear-gradient(to right, #fff, #e0e0e0) !important;
             }
 
@@ -544,6 +652,7 @@
             /* Ép hiển thị lại viền cho các mục */
             .experience-item, .education-item, .activity-item {
                 background: #f9f9f9 !important;
+                -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
                 border: 1px solid #ddd !important;
             }
@@ -551,6 +660,7 @@
             .projects li, .certificates li {
                 background: #f9f9f9 !important;
                 border: 1px dashed #ddd !important;
+                -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
             }
 
@@ -577,8 +687,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <img src="avatar.jpg" alt="Avatar" class="avatar">
+        <aside class="sidebar">
+            <img src="avatar.jpg" alt="Ảnh đại diện Võ Mạnh Cường" class="avatar">
             <h1>VÕ MẠNH CƯỜNG</h1>
             <p style="text-align: center;">Sinh viên Chuyên ngành Mạng Máy Tính và Truyền Thông Dữ Liệu <br> Tại Trường Đại học Tôn Đức Thắng</p>
             <div class="contact-info">
@@ -614,17 +724,20 @@
                     <li>Khả năng học hỏi nhanh chóng<div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div></li>
                 </ul>
             </div>
-        </div>
-        <div class="main-content">
-            <div class="section">
+        </aside>
+        
+        <main class="main-content">
+            <section class="section">
                 <h2>Tóm tắt</h2>
                 <p>Hoà đồng, thân thiện, dễ cười. Luôn cố gắng xây dựng mối quan hệ lành mạnh, ham học hỏi. Có kiến thức nền tảng về thiết kế và bảo mật mạng. Có kinh nghiệm thực hành qua các dự án học thuật và mong muốn áp dụng kiến thức vào môi trường làm việc thực tế. Đam mê công nghệ IT, sẵn sàng học hỏi và đóng góp cho các dự án liên quan đến hạ tầng mạng.</p>
-            </div>
-            <div class="section">
+            </section>
+            
+            <section class="section">
                 <h2>Mục tiêu nghề nghiệp</h2>
                 <p>Tìm kiếm vị trí thực tập hoặc việc làm liên quan đến lĩnh vực Mạng máy tính và Truyền thông dữ liệu để tích lũy kinh nghiệm, áp dụng kiến thức đã học và phát triển bản thân. <br> Hướng tới trở thành Network Engineer chuyên về thiết kế, cấu hình và bảo mật hệ thống mạng doanh nghiệp. Đóng góp sức vào an toàn thông tin, an ninh mạng tổ chức, khu vực và quốc gia.</p>
-            </div>
-            <div class="section">
+            </section>
+            
+            <section class="section">
                 <h2>Học vấn</h2>
                 <div class="education-item">
                     <strong>Sinh viên Mạng Máy Tính và Truyền Thông Dữ Liệu</strong>
@@ -657,16 +770,18 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            
+            <section class="section">
                 <h2>Kinh nghiệm làm việc</h2>
                 <div class="experience-item">
                     <strong>Cộng tác viên Telesale - FPT Telecom</strong>
                     09/2024 - 11/2024<br>
                     Cộng tác viên Telesale dịch vụ Internet tại FPT Telecom. Tư vấn và bán các dịch vụ viễn thông, tiếp xúc khách hàng, học hỏi về mạng lưới viễn thông thực tế.
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            
+            <section class="section">
                 <h2>Hoạt động</h2>
                 <div class="activity-item">
                     <strong>Điều phối viên - Hiến máu tình nguyện</strong>
@@ -677,8 +792,9 @@
                     10/2022 - Hiện tại<br>
                     Tham gia các hoạt động tình nguyện: Mùa hè xanh 2023, Xuân Tình Nguyện 2022-2023, 2023-2024, 2024-2025 do Đoàn Khoa tổ chức.
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            
+            <section class="section">
                 <h2>Dự án</h2>
                 <ul class="projects">
                     <li><strong>Cấu hình hệ thống mạng doanh nghiệp</strong><br>Xây dựng mô hình mạng Trụ sở chính (HQ)/Chi nhánh hỗ trợ IPv4/IPv6 song song.
@@ -696,8 +812,8 @@
                                 <br> Phân tích kiến trúc GenBI dựa trên Semantic Layer và mô hình Text-to-SQL cho phép truy vấn bằng ngôn ngữ tự nhiên.
                                 <br> Khám phá cơ chế hoạt động của RAG Pipeline (Retrieval-Augmented Generation), bao gồm tích hợp Vector Database và cơ chế Correction tự động.<br>GitHub: <a href="https://github.com/vmcchooky/VoManhCuong_NLP_WrenAI">https://github.com/vmcchooky/VoManhCuong_NLP_WrenAI</a></li>
                 </ul>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
