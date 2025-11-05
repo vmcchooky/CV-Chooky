@@ -455,53 +455,121 @@
         }
 
         @media print {
+            /* ========= CÀI ĐẶT CHUNG KHI IN ========= */
+            
+            * {
+                /* Ép trình duyệt giữ lại màu sắc, nền và bóng */
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                box-shadow: inherit !important;
+                text-shadow: inherit !important;
+
+                /* Loại bỏ tất cả hiệu ứng chuyển động */
+                animation: none !important;
+                transition: none !important;
+            }
+
             body {
                 background-color: #fff;
                 padding: 0;
-                font-size: 12pt; /* Standard print font size */
+                /* Đặt cỡ chữ phù hợp cho bản in A4 */
+                font-size: 12pt !important;
             }
+
             .container {
                 box-shadow: none;
                 grid-template-columns: 1fr;
                 border-radius: 0;
+                border: none;
             }
+
+            /* ========= SIDEBAR (CỘT BÊN TRÁI) ========= */
+
             .sidebar {
-                background: none;
-                color: #2c3e50;
+                /* Ép hiển thị lại nền gradient */
+                background: linear-gradient(135deg, #3498db, #8e44ad) !important;
+                /* Ép hiển thị lại màu chữ */
+                color: #fff !important;
                 padding: 20px;
                 border: none;
             }
-            .skills li {
-                background: #f0f4f8;
-            }
-            .experience-item, .education-item, .projects li, .certificates li {
-                background: none;
-                box-shadow: none;
-                border: none;
-            }
+
             .avatar {
-                border: 2px solid #ccc;
+                /* Ép hiển thị lại viền avatar */
+                border: 5px solid rgba(255,255,255,0.3) !important;
             }
-            /* Remove animations for print */
-            * {
-                animation: none !important;
-                transition: none !important;
+
+            /* Ép hiển thị lại icon và màu chữ của icon/link */
+            .contact-info a, .contact-info i {
+                color: #fff !important;
             }
-            .education-details .subject-item {
-                background: none;
+
+            /* Ép hiển thị lại font icon (Font Awesome) */
+            .fab, .fas {
+                font-family: "Font Awesome 5 Free" !important;
+                font-weight: 900 !important;
+                -webkit-font-smoothing: antialiased !important;
+                display: inline-block !important;
+                font-style: normal !important;
+                font-variant: normal !important;
+                text-rendering: auto !important;
+                line-height: 1 !important;
             }
-            .education-details .achievements li:before {
-                content: "* ";
+
+            .skills li {
+                background: rgba(255,255,255,0.25) !important;
+                border: 1px dashed rgba(255,255,255,0.5) !important;
             }
+            
             .skill-bar {
-                background-color: #ddd;
+                background-color: rgba(255,255,255,0.2) !important;
             }
+
             .skill-level {
-                background-color: #000;
+                background: linear-gradient(to right, #fff, #e0e0e0) !important;
             }
+
+            .contact-info {
+                border-top: 1px dotted #fff !important;
+            }
+
+            /* ========= MAIN CONTENT (CỘT BÊN PHẢI) ========= */
+
             .section {
+                /* FIX QUAN TRỌNG: Hiển thị lại nội dung (thay vì opacity: 0) */
+                opacity: 1 !important; 
                 border-bottom: 1px solid #ccc;
-                opacity: 1 !important;
+            }
+
+            /* Ép hiển thị lại viền cho các mục */
+            .experience-item, .education-item, .activity-item {
+                background: #f9f9f9 !important;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+                border: 1px solid #ddd !important;
+            }
+
+            .projects li, .certificates li {
+                background: #f9f9f9 !important;
+                border: 1px dashed #ddd !important;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+            }
+
+            .experience-item strong, .education-item strong, .activity-item strong {
+                border-bottom: 1px dotted #ccc !important;
+            }
+
+            /* Hiển thị chi tiết học vấn */
+            .education-details .subject-item {
+                background: #e9f5ff !important;
+                border: 1px solid #cce7ff !important;
+            }
+
+            .education-details .achievements li:before {
+                /* Thay icon cúp bằng dấu * để đảm bảo in được */
+                content: "🏆 ";
+                position: absolute;
+                left: 0;
+                top: 0;
             }
         }
     </style>
